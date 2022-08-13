@@ -1,0 +1,41 @@
+.slider {
+    margin-top: 70px;
+    max-width: 1500px; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.slick-slide {
+    &:not(:first-child) {
+        padding-right: 7.5px;
+    }
+
+    &:not(:last-child) {
+        padding-left: 7.5px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slider {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .slider {
+        img {
+            height: 240px;
+        }
+    }
+}

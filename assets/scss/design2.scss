@@ -1,0 +1,915 @@
+@import "./color.scss";
+@import "./text.scss";
+@import "./font.scss";
+@import "./utilities.scss";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+	height: 754px;
+	background-image: url("../images/design2/header-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 65px 12px;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(30,30,30,0.5);
+	}
+
+	.header-text {
+		font-family: "Montserrat", "sans-serif";
+		font-size: 12px;
+		line-height: 15px;
+		text-align: center;
+		letter-spacing: 0.25em;
+		color: $white;
+		position: absolute;
+		top: 65px;
+		left: 0;
+		right: 0;
+		display: block;
+	}
+
+	.couple-name {
+	    font-family: "Great Vibes", "arial";
+	    text-align: center;
+	    font-size: 60px;
+	    line-height: 72px;
+	    margin-top: 50px;
+	    position: absolute;
+	    top: 70px;
+	    left: 0;
+	    right: 0;
+
+	    .man-couple-name {
+	        color: $light-grey;
+	    }
+
+	    .ampersand-color {
+	        color: $light-brown;
+	    }
+
+	    .woman-couple-name {
+	        color: $light-violet;
+	    }
+	}
+
+	.header-carousel-wrapper {
+		max-width: 740px;
+		margin-top: 220px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.header-carousel {
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 375px;
+			object-fit: cover;
+		}
+	}
+
+	.navbar-wrapper {
+	    display: flex;
+		justify-content: center;
+		margin-top: 50px;
+	}
+
+
+	.navbar {
+	    padding: 0;
+	    display: inline-block;
+	}
+
+	.navbar-item {
+	    display: inline-block;
+        padding: 8px 16px;
+        margin: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: "Montserrat", "sans-serif";
+        border: 1px solid $gold;
+        box-sizing: border-box;
+
+	    &:not(:last-child) {
+	        margin-right: 35px;
+	    }
+	}
+
+	.navbar-link {
+	    color: $gold;
+	    text-decoration: none;
+	    letter-spacing: 0.24em;
+	    text-transform: uppercase;
+		font-size: 12px;
+		line-height: 22px;
+	}
+}
+
+.info {
+	background-color: $cream;
+	position: relative;
+	padding: 65px 12px;
+
+	.decoration {
+		position: absolute;
+		top: 0;
+
+		&.left {
+			left: 0;
+		}
+
+		&.right {
+			right: 0;
+			transform: scaleX(-1);
+		}
+	}
+
+	.title {
+		font-family: "Montserrat", "sans-serif";
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		display: block;
+		color: $brown;
+		letter-spacing: 0.25em;
+	}
+
+	.counterdown {
+		width: 462px;
+		background-color: $dark-brown-2;
+		border-radius: 8px;
+		padding: 35px 0px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 65px;
+	}
+
+	.counterdown-value {
+	    font-family: "Playfair Display", "sans-serif";
+	    letter-spacing: 0.25em;
+	    color: $gold;
+	    font-size: 54px;
+	    line-height: 50px;	    
+	}
+
+	.counterdown-label {
+	    font-family: "Playfair Display", "sans-serif";
+	    font-size: 22px;
+	    line-height: 30px;
+	    letter-spacing: 0.25em;
+	    color: $white;
+	    margin-top: 16px;
+	}
+
+	.event-info {
+		margin-top: 80px;
+	}
+
+	.event-card {
+		border: 1px solid $brown;
+		padding: 10px;
+		border-radius: 8px;
+		width: 285px;
+		flex-grow: 0;
+		flex-shrink: 0;
+
+		&:not(:last-child) {
+			margin-right: 90px;
+		}
+	}
+
+	.event-body {
+		background-color: $white;
+		border-radius: 8px;
+		padding: 12px;
+		height: 230px;
+
+		.icon-wrapper {
+			text-align: center;
+			color: $brown;
+			margin-top: 24px;
+
+			.material-icons {
+				font-size: 56px;
+				width: 56px;
+			}
+		}
+
+		.info-content {
+			text-align: center;
+			font-family: "Montserrat", "sans-serif";
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 0.02em;
+			line-height: 20px;
+			text-transform: uppercase;
+			color: $brown;
+			margin: 24px auto 0 auto;
+		}
+	}
+}
+
+.quote {
+    background-image: url("../images/design1/tagline-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 390px;
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30,30,30,0.75);
+    }
+
+
+    .icon-wrapper {
+        margin-top: 90px;
+    }
+
+    .icon {
+        display: inline-block;
+    }
+
+    .quote-text {
+        font-family: "Montserrat", "sans-serif";
+        text-align: center;
+        letter-spacing: 0.12em;
+        max-width: 690px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $white;
+        line-height: 25px;
+        font-size: 18px;
+        width: 100%;
+        margin-top: 78px;
+        padding: 0 18px;
+    }
+}
+
+.about-couple {
+	background-color: $cream;
+	position: relative;
+	height: 1170px;
+
+	.decoration {
+		position: absolute;
+		bottom: 0;
+
+		&.left {
+			left: 0;
+			transform: scaleY(-1);
+		}
+
+		&.right {
+			right: 0;
+			transform: scale(-1, -1);
+		}
+	}
+
+	.title {
+		font-family: "Montserrat", "sans-serif";
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		color: $brown;
+		letter-spacing: 0.25em;
+		position: absolute;
+		top: 65px;
+		left: 0;
+		right: 0;
+	}
+
+	.couple-wrapper {
+		position: absolute;
+		max-width: 1200px;
+		height: 570px;
+		top: 160px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		padding: 0 12px;
+	}
+
+	.border-wrapper {
+		position: relative;
+		height: 570px;
+		width: 100%;
+	}
+
+	.border {
+		width: 85%;
+		height: 435px;
+		border: 1px solid $white;
+		border-radius: 14px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 90px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.content-wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.content-divider {
+		width: 100%;
+
+		&.ring {
+			width: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.wrapper {
+		position: relative;
+		width: 100%;
+		height: 590px;
+	}
+
+	.card {
+		border: 1px solid $white;
+		box-sizing: border-box;
+		border-radius: 14px;
+		position: absolute;
+		top: 60px;
+		width: 100%;
+		height: 380px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 12px;
+		left: 0;
+		right: 0;
+	}
+
+	.content {
+		width: 300px;
+
+		&.man {
+			margin-left: 140px;
+			float: left;
+		}
+
+		&.woman {
+			margin-right: 140px;
+			float: right;
+		}
+	}
+
+	.couple-image {
+	    border-radius: 50%;
+	    width: 180px;
+	    height: auto;
+		z-index: 1;
+		display: block;
+		margin: 0 auto;
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+
+	.heart-ring {
+		width: 124px;
+		height: auto;
+	}
+
+	.couple-name {
+        font-family: "Playfair Display", "sans-serif";
+        font-size: 22px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.08em;
+        color: $brown;
+        width: 160px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+    }
+
+    .couple-description {
+        font-family: "Montserrat", "sans-serif";
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.08em;
+        color: $dark-green;
+        margin-top: 26px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+	}
+	
+	.couple-decoration {
+		position: absolute;
+		bottom: 0;
+
+		&.left {
+			left: 0;
+		}
+
+		&.right {
+			right: 0;
+			transform: scaleX(-1);
+		}
+	}
+
+    .social-icons {
+        margin-top: 40px;
+    }
+
+    .social-icon {
+        color: $brown;
+        font-size: 24px;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+
+    .slider {
+		position: absolute;
+		bottom: 65px;
+    	left: 0;
+    	right: 0;
+    	max-width: 800px;
+	}
+}
+
+.map {
+    background-image: url("../images/design1/map-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    height: 640px;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30,30,30,0.5);
+    }
+
+    .title {
+        font-family: "Montserrat", "sans-serif";
+        letter-spacing: 0.25em;
+        color: $white;
+        text-align: center;
+        margin-top: 65px;
+        font-size: 20px;
+        line-height: 24px;
+	}
+	
+	.mapouter{
+		position:relative;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 12px;
+		margin-top: 75px;
+		height:390px;
+		width:820px;
+	}
+	
+	.gmap_canvas {
+		overflow:hidden;
+		background:none!important;
+		height:390px;
+		width:820px;
+	}
+}
+
+.footer {
+    background-color: $dark-brown;
+    width: 100%;
+    padding: 72px 0;
+
+    .decoration-wrapper {
+        width: 160px;
+        height: 160px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    
+        .decoration-image {
+            width: 160px;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .decoration-text {
+            font-family: "Great Vibes", "sans-serif";
+            font-size: 24px;
+            line-height: 30px;
+            color: $white;
+            font-weight: 300;
+
+            &.mini {
+                font-size: 18px;
+                line-height: 23px;
+            }
+
+            &.position-1 {
+                position: absolute;
+                top: 35px;
+                left: 40px;
+            }
+
+            &.position-2 {
+                position: absolute;
+                top: 60px;
+                left: 65px;
+            }
+
+            &.position-3 {
+                position: absolute;
+                top: 56px;
+                left: 88px;
+            }
+
+            &.position-4 {
+                position: absolute;
+                top: 90px;
+                left: 45px;
+            }
+        }
+    }
+
+    .social-icons {
+        margin-top: 40px;
+    }
+
+    .social-icon {
+        color: $brown;
+        font-size: 24px;
+
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 13px;
+        }
+	}
+	
+	.template-title {
+		font-family: "Montserrat", "sans-serif";
+		font-weight: 300px;
+		font-size: 12px;
+		line-height: 22px;
+		text-align: center;
+		letter-spacing: 0.2em;
+		color: $gold;
+		margin-top: 30px;
+		text-transform: uppercase;
+	}
+	
+	.copyright {
+		margin-top: 30px;
+		font-family: "Montserrat", "sans-serif";
+		font-size: 12px;
+		line-height: 22px;
+		letter-spacing: 0.2em;
+		text-align: center;
+		color: $white;
+		padding: 0 12px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.header {
+		.navbar {
+			padding: 0 12px;
+		}
+
+		.navbar-item {
+			padding: 2px 12px;
+
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+		}
+
+		.navbar-link {
+			font-size: 8px;
+		}
+	}
+
+	.info {
+		.decoration {
+			width: 100px;
+			height: auto;
+		}
+
+		.counterdown {
+			width: 100%;
+			padding: 20px 0px;
+		}
+
+		.counterdown-label {
+			font-size: 12px;
+		}
+
+		.event-card {
+			&:not(:last-child) {
+				margin: 0 0 50px 0;
+			}
+		}
+	}
+
+	.quote {
+		.icon-wrapper {
+			margin-top: 62px;
+		}
+
+		.quote-text {
+			font-size: 14px;
+			margin-top: 54px;
+		}
+	}
+
+	.about-couple {
+		height: 1720px;
+
+		.decoration {
+			width: 100px;
+			height: auto;
+		}
+
+		.border {
+			display: none;
+		}
+
+		.content-wrapper {
+			flex-wrap: wrap;
+		}
+
+		.content-divider {
+			&.ring {
+				height: 200px;
+				width: 100%;
+			}
+		}
+
+		.wrapper {
+			height: 480px;
+		}
+
+		.content {
+			&.man {
+				margin: 0 auto;
+				float: none;
+			}
+
+			&.woman {
+				margin: 0 auto;
+				float: none;
+			}
+		}
+
+		.couple-image {
+			width: 120px;
+		}
+
+		.couple-name {
+			margin-top: 65px;
+		}
+
+		.couple-decoration {
+			width: 120px;
+			height: auto;
+		}
+
+		.slider {
+			bottom: 80px;
+		}
+	}
+
+	.map {
+		.mapouter {
+			width: 100%;
+		}
+
+		.gmap_canvas {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	.about-couple {
+		height: 1735px;
+
+		.border {
+			display: none;
+		}
+
+		.content-divider {
+			&.ring {
+				width: 100%;
+				height: 200px;
+			}
+		}
+
+		.wrapper {
+			width: 443px;
+			height: 495px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.card {
+			width: 320px;
+			height: 390px;
+			top: 60px;
+		}
+
+		.couple-image {
+			width: 120px;
+		}
+
+		.couple-name {
+			margin-top: 65px;
+		}
+
+		.couple-description {
+			font-size: 14px;
+			line-height: 17px;
+			width: 300px;
+		}
+
+		.couple-decoration {
+			width: 235px;
+		}
+
+		.slider {
+			img {
+				height: 240px;
+			}
+		}
+	}
+
+	.map {
+		.mapouter {
+			width: 100%;
+		}
+
+		.gmap_canvas {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.about-couple {
+		height: 1880px;
+
+		.border {
+			display: none;
+		}
+
+		.content-divider {
+			&.ring {
+				width: 100%;
+				height: 200px;
+			}
+		}
+
+		.wrapper {
+			width: 600px;
+			height: 575px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.card {
+			width: 420px;
+			height: 420px;
+			top: 90px;
+		}
+
+		.couple-image {
+			width: 180px;
+		}
+
+		.couple-name {
+			margin-top: 120px;
+		}
+
+		.couple-description {
+			font-size: 14px;
+			line-height: 17px;
+			width: 300px;
+		}
+
+		.couple-decoration {
+			width: 345px;
+		}
+
+		.slider {
+			img {
+				height: 240px;
+			}
+		}
+	}
+
+	.map {
+		.mapouter {
+			width: 100%;
+		}
+
+		.gmap_canvas {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.about-couple {
+		height: 1170px;
+
+		.border {
+			display: block;
+			height: 455px;
+		}
+
+		.content-wrapper {
+			flex-wrap: nowrap;
+		}
+
+		.wrapper {
+			height: 610px;
+		}
+
+		.content-divider {
+			&.ring {
+				width: 300px;
+				height: 100%;
+			}
+		}
+
+		.heart-ring {
+			margin-top: 300px;
+		}
+
+		.content {
+			width: 300px;
+			height: 100%;
+	
+			&.man {
+				margin-left: 160px;
+				float: left;
+			}
+	
+			&.woman {
+				margin-right: 160px;
+				float: right;
+			}
+		}
+
+		.wrapper {
+			width: 100%;
+		}
+
+		.card {
+			border: none;
+			position: relative;
+			top: 0;
+			width: 100%;
+		}
+
+		.couple-image {
+			position: relative;
+		}
+
+		.couple-name {
+			margin-top: 35px;
+		}
+	}
+}
