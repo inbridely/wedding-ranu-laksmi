@@ -10,3 +10,22 @@ function refreshCountdown() {
     $("#countdown-hours").text(hours < 10 ? `0${hours}` : hours);
     $("#countdown-minutes").text(minutes < 10 ? `0${minutes}` : minutes);
 }
+
+// AOS.init();
+
+let isPlaying = false;
+
+$("#btn-player-player").click(function() {
+    isPlaying = !isPlaying;
+
+    $("#player-play").attr('hidden', isPlaying)
+    $("#player-pause").attr('hidden', !isPlaying)
+
+    if (isPlaying) {
+        $("#audio-player")[0].play();
+        console.log("play");
+    } else {
+        $("#audio-player")[0].pause();
+        console.log("pause");
+    }
+});

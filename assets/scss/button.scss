@@ -26,3 +26,16 @@
 .bordered {
     background-color: rgba(0,0,0,0) !important;
 }
+
+.btn-audio-player {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    z-index: 100;
+    background-color: $light-purple;
+    box-sizing: border-box;
+    border: 0px solid $light-purple;
+}

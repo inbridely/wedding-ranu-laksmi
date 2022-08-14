@@ -445,6 +445,8 @@ p {
   background-image: url("../images/design3/header-background.jpg");
   background-size: cover;
   position: relative;
+  background-position: center;
+  z-index: 1;
 }
 .header .overlay {
   position: absolute;
@@ -1328,5 +1330,7 @@ p {
     width: 33.33%;
   }
 }
+
+
 
 /*# sourceMappingURL=design3.css.map */
