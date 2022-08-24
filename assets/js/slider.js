@@ -29,4 +29,26 @@ $(document).ready(function() {
             }
         ]
     });
+
+    // Get the modal
+    const modal = document.getElementById('zoom-modal');
+ 
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    const modalImg = document.getElementById("img-modal");
+    $(".slide-image").on('click', function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+    });
+    
+    
+    // When the user clicks on <span> (x), close the modal
+    modal.onclick = function() {
+        modalImg.className += " out";
+        setTimeout(function() {
+            modal.style.display = "none";
+            modalImg.className = "modal-content";
+        }, 400);
+        
+    }    
 });
